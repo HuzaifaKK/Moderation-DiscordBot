@@ -4,8 +4,6 @@ from pathlib import Path
 import os
 from discord.utils import get
 
-TOKEN = 'Your Bot Token Here'
-
 intents = discord.Intents.all()
 client = commands.Bot(command_prefix='-')
 client.remove_command('help')
@@ -21,7 +19,7 @@ for file in os.listdir(cwd+'/Cogs'):
 
 @client.event
 async def on_ready():
-    print('Brine Bot Is Ready!')
+    print('Brine Bot is ready!')
 
 if __name__ == '__main__':
     for extension in extensions:
@@ -31,4 +29,4 @@ if __name__ == '__main__':
             err = '[Error {}]'.format(error)
             print('Loading {}... '.format(extension, err))
 
-client.run(TOKEN)
+client.run("PUT_YOUR_BOT_TOKEN_HERE")
